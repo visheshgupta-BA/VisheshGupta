@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Fact -- Vishesh Gupta</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel = "icon" href = 
+    "assets/140900073-creative-letter-vg-logo-vector-template-with-black-color-vg-logo-design.webp" 
+            type = "image/x-icon">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyB7NZXoEzJbbajSQtCFNO3Mp_jhMd8FcK0"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <header>
+        <div class="user">
+       
+            <h3 class="name"><a class="naming" href="index.html">Vishesh Gupta</a></h3>
+            
+        </div>
+
+      <nav class="navbar">
+        <ul>
+            <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="readinglist.html">Reading List</a></li>
+          <li><a href="funfact.html">Fun Fact</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    </header>
+    <div style="font-size: 3.5rem; margin: 30px 0 0 200px"><b>{ Fun }</b></div>
+    <div style="font-size: 2.5rem; margin: 27px 0 0 200px">
+      A Partially Complete List of the Places I Have Visited.
+    </div>
+    <div
+      id="map"
+      style="width: 1000px; height: 500px; margin: 30px 0px 30px 200px"
+    ></div>
+
+    <script type="text/javascript">
+      var locations = [
+        ["Khairthal, Rajasthan, India", 27.801164, 76.644159],
+        ["Alwar, Rajasthan, India", 27.552991, 76.634573],
+        ["Jaipur, Rajasthan, India", 26.912434, 75.787271],
+        ["Kolkata, West Bengal, India", 22.5697222, 88.3697205],
+        ["Guwahati, West Bengal, India", 26.148043, 91.731377],
+        ["Gangtok, West Bengal, India", 27.338936, 88.606506], 
+        ["Darjeeling, West Bengal, India", 27.04242715456445, 88.26501371130456],
+        ["Kalimpong, West Bengal, India", 27.060169045396037, 88.46891948085353],
+        ["Ahmedabad, Gujarat, India", 23.022505, 72.571362],
+        ["Mumbai, Maharashtra, India", 19.075984, 72.877656],
+        ["Delhi, India", 28.661898, 77.227396],
+        ["Shimla, Himachal Pradesh, India", 31.104815, 77.173403],
+        ["Varanasi, Uttar Pradesh, India", 25.321684, 82.987289],
+        ["Kanpur, Uttar Pradesh, India", 26.449923, 80.331871],
+        ["Lucknow, Uttar Pradesh, India", 26.850000, 80.949997],
+        ["Prayagraj, Uttar Pradesh, India", 25.473034, 81.878357],
+        ["Agra, Uttar Pradesh, India", 27.18379239872873, 78.00919321383242],
+        ["Agra, Uttar Pradesh, India", 27.495537766074538, 77.67213776343094],
+        ["Goverdhan, Uttar Pradesh, India", 27.49464295752281, 77.46442784887202],
+        ["Ooty, Tamil Nadu, India", 11.406414, 76.693244],
+        ["Mysore, Karnataka, India", 12.29581, 76.639381],
+        ["Amritsar, Punjab, India", 31.633979, 74.872264],
+        ["Jalandhar, Punjab, India", 31.326015, 75.576183],
+        ["Mount Abu, Rajasthan, India", 24.592591, 72.715627],
+        ["Bengaluru, Karnataka, India", 12.971599, 77.594563],
+        ["Agra, Uttar Pradesh, India", 27.17667, 78.008075],
+        ["Kota, Rajasthan, India", 25.213816, 75.864753],
+        ["Goa, India", 15.299327, 74.123996],
+        ["Guntur, Andhra Pradesh, India", 16.306652, 80.43654],
+        ["Suryalanka Beach, Andhra Pradesh, India", 15.848713, 80.533774],
+        ["Chennai, Tamil Nadu, India", 13.08268, 80.270718],
+        ["Wagah Border, Punjab, India", 31.605148, 74.575238],
+        ["Chandigarh, India", 30.733315, 76.779418],
+        ["Vaishno Devi, India", 33.0346196, 74.9585211],
+        ["Manali, India", 32.2394177, 77.1696102],
+        ["Kurukshetra, India", 29.969277, 76.8468822],
+        ["Dehradun, India", 30.3254098, 77.9470946],
+        ["Tonk, India", 26.1654777, 75.7792924],
+        ["Dubai, United Arab Emirates, USA", 25.276987, 55.296249],
+        ["New York City, New York, USA", 40.712784, -74.005941],
+        ["Jersey City, New Jersey, USA", 40.728157, -74.077642],
+        ["Denver, Colorado, USA", 39.742043, -104.991531],
+        ["Indiana University Bloomington, Indiana, USA", 39.165325, -86.526386],
+        ["Chicago, Illinois, USA", 41.878114, -87.629798],
+        ["Los Angeles, California, USA", 34.052234, -118.243685],
+        ["Seattle, Washington, USA", 47.60621, -122.332071],
+        ["San Francisco, California, USA", 37.775058, -122.42008],
+        ["Baltimore, Maryland, USA", 39.299236, -76.609383],
+        ["Carnegie Mellon University Pittsburgh, Pennsylvania, USA", 40.440624, -79.995888],
+        ["Salem, Massachusetts, USA", 42.519539, -70.896713],
+        ["Green Mountain National Forest, Vermont, USA", 42.768208, -72.946121],
+        ["Northeastern University Boston, Massachusetts, USA", 42.361145, -71.057083],
+      ];
+
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 2,
+        center: new google.maps.LatLng(20, -15),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      });
+
+      var infowindow = new google.maps.InfoWindow();
+
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+        });
+
+        google.maps.event.addListener(
+          marker,
+          "click",
+          (function (marker, i) {
+            return function () {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            };
+          })(marker, i)
+        );
+      }
+    </script>
+    <section class="portfolio" id="portfolio">
+
+      <h1 class="heading">| My <span>Teachers |</span> </h1>
+      
+      <div class="box-container">
+      
+          <div class="about-project-container">
+              <div >
+               <img class="teacher-image-1" src="assets/WhatsApp Image 2022-11-19 at 10.54.13 AM.jpeg">
+               <div class="project-contents">
+                   <div class="photo-text-1">Twitter Tweets Truth Recognition</div>
+                   
+               </div>
+              </div>
+              <div>
+                  <img class="teacher-image-2" src="assets/WhatsApp Image 2022-11-19 at 10.54.13 AM.jpeg">
+                  <div class="project-contents">
+                      <div class="photo-text-2">Coronary Heart Disorder System</div>
+                      
+                  </div>
+                 </div>
+                
+          </div>
+          <div class="about-project-container">
+            <div >
+             <img class="teacher-image-1" src="assets/WhatsApp Image 2022-11-19 at 10.54.13 AM.jpeg">
+             <div class="project-contents">
+                 <div class="photo-text-3">Twitter Tweets Truth Recognition</div>
+                 
+             </div>
+            </div>
+            <div>
+                <img class="teacher-image-2" src="assets/WhatsApp Image 2022-11-19 at 10.54.13 AM.jpeg">
+                <div class="project-contents">
+                    <div class="photo-text-4">Coronary Heart Disorder System</div>
+                    
+                </div>
+               </div>
+              
+        </div>
+      
+      </div>
+      
+      </section>
+    <footer>
+        <nav class="navbar">
+              <ul>
+                  <li><a href="blog.html"><i class="fa fa-rss"></i></a></li>
+                  <li><a href="https://github.com/visheshgupta-BA"><i class="fab fa-github"></i></a></li>
+                  <li><a href="https://twitter.com/SudhirVishesh"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="mailto:guptavishesh264@gmail.com"><i class="fas fa-envelope"></i></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/ba-visheshgupta/"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+          </nav>
+      
+      </footer>
+  </body>
+</html>
