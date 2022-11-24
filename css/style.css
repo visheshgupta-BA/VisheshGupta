@@ -937,11 +937,11 @@ hr {
 
 .resume-button  {
   border-radius: 8px; 
-  padding:3px; 
+  padding:8px; 
   cursor:pointer;
 }
 .resume-button:hover  {
-  color: #00E6FE;
+  color: rgb(39, 87, 200);
 }
 /* readlist css */
 
