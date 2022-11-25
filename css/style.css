@@ -563,7 +563,7 @@ img {
 
 .about .row .counter .box {
   width: 20rem;
-  background: steelblue;
+  background: linear-gradient(45deg, black, transparent);
   text-align: center;
   padding: 2rem;
   margin: 2rem;
