@@ -363,11 +363,11 @@ li {
   font-size: 3.25rem;
   padding: 1rem;
   border-bottom: 0.1rem solid #fff4;
-  color: #0000009c;
+  color: black;
 }
 
 .heading span {
-  color: #0000009c;
+  color: black;
 }
 
 header {
