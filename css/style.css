@@ -820,6 +820,18 @@ img {
   
 }
 
+.project-container-6{
+  display: flex;
+  margin-left: 38px;
+  
+}
+
+.project-container-7{
+  display: flex;
+  margin-left: 38px;
+  
+}
+
 .projects-img {
   max-width: 250px;
   max-height: 250px;
