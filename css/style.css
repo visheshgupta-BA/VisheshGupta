@@ -789,6 +789,12 @@ img {
 
 /* Projects Css */
 
+.project-container-0 {
+    display: flex;
+    margin-left: -88px;
+}
+
+
 .project-container {
   display: flex;
   
